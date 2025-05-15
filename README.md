@@ -55,35 +55,41 @@ Both source (Arabic) and target (English) sequences are tokenized and padded man
 ---
 
 ## 🏗️ Model Components
+
 ➤ Encoder
-Embeds input tokens
 
-Processes them using an LSTM layer
+- Embeds input tokens
 
-Outputs hidden and cell states
+- Processes them using an LSTM layer
+
+- Outputs hidden and cell states
 
 ➤ Bahdanau Attention
-Computes attention weights based on the decoder hidden state and encoder outputs
 
-Produces a context vector for the decoder at each timestep
+- Computes attention weights based on the decoder hidden state and encoder outputs
+
+- Produces a context vector for the decoder at each timestep
 
 ➤ Decoder
-Embeds target input tokens
 
-Uses the context vector from attention
+- Embeds target input tokens
 
-Concatenates embedded input and context before passing to LSTM
+- Uses the context vector from attention
 
-Predicts the next token using a linear layer
+- Concatenates embedded input and context before passing to LSTM
+
+- Predicts the next token using a linear layer
 
 ➤ Seq2Seq
-Combines encoder and decoder
 
-Uses teacher forcing during training
+- Combines encoder and decoder
+
+- Uses teacher forcing during training
 
 ---
 
 ## ⚙️ Training Configuration
+
 Embedding Dim: 256
 
 Hidden Dim: 512
